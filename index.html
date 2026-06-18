@@ -14,7 +14,7 @@
   <title>Vinit Kumar Singh | Chief Growth Officer | CBO | VP Product | Head of Strategy & Growth</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
   <script type="application/ld+json">
     {
@@ -771,6 +771,401 @@
         break-inside: avoid;
       }
     }
+
+    /* Black + purple executive theme */
+    :root {
+      --ink: #ffffff;
+      --muted: #cfc7ff;
+      --line: rgba(190, 160, 255, 0.32);
+      --surface: #09070f;
+      --soft: #120d1f;
+      --soft-2: #1a1030;
+      --accent: #a855f7;
+      --accent-2: #d8b4fe;
+      --accent-3: #f5d0fe;
+      --navy: #ffffff;
+      --shadow: 0 28px 90px rgba(0, 0, 0, 0.48);
+    }
+
+    body {
+      color: #ffffff;
+      background:
+        radial-gradient(circle at 18% 0%, rgba(168, 85, 247, 0.36), transparent 24rem),
+        radial-gradient(circle at 95% 18%, rgba(216, 180, 254, 0.18), transparent 28rem),
+        #050308;
+      font-family: "Poppins", Arial, sans-serif;
+    }
+
+    .preloader {
+      background: #050308;
+    }
+
+    .loader-card,
+    .resume,
+    .metric,
+    .panel,
+    .skill,
+    .stack-item,
+    .highlight-card,
+    .keyword-group {
+      background: linear-gradient(180deg, rgba(20, 14, 34, 0.98), rgba(9, 7, 15, 0.98));
+      border-color: var(--line);
+    }
+
+    .loader-mark {
+      border-color: rgba(216, 180, 254, 0.24);
+      border-top-color: var(--accent);
+    }
+
+    .loader-name,
+    .loader-copy,
+    .summary,
+    .bullet,
+    .skill,
+    .stack-item,
+    .highlight-card,
+    .edu-school,
+    .edu-note,
+    .language-list,
+    .footer,
+    .metric span {
+      color: #e8ddff;
+    }
+
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(5, 3, 8, 0.94), rgba(88, 28, 135, 0.88)),
+        url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1800&q=80") center/cover;
+    }
+
+    .eyebrow,
+    .contact-item,
+    .btn.secondary {
+      border-color: rgba(216, 180, 254, 0.42);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .contact-item svg,
+    .btn.secondary svg,
+    .stack-item svg,
+    .panel-title svg {
+      color: #d8b4fe;
+    }
+
+    h1,
+    .job h3,
+    .edu-degree,
+    .summary strong,
+    .bullet strong,
+    .skill strong,
+    .highlight-card strong {
+      color: #ffffff;
+    }
+
+    .role-line,
+    .section-title,
+    .panel-title,
+    .keyword-group h3,
+    .company,
+    .metric strong {
+      color: #d8b4fe;
+    }
+
+    .section-title::after,
+    .timeline::before {
+      background: rgba(216, 180, 254, 0.30);
+    }
+
+    .tag {
+      border-color: rgba(216, 180, 254, 0.34);
+      background: rgba(168, 85, 247, 0.13);
+      color: #f4e8ff;
+    }
+
+    .job::before,
+    .bullet::before,
+    .floating-print {
+      background: #a855f7;
+    }
+
+    .job::before {
+      border-color: #09070f;
+      box-shadow: 0 0 0 1px rgba(216, 180, 254, 0.45);
+    }
+
+    .highlights,
+    .footer {
+      background: #0d0917;
+    }
+
+    .btn {
+      background: #ffffff;
+      color: #170823;
+    }
+
+    @media print {
+      @page {
+        size: A4 portrait;
+        margin: 7mm;
+      }
+
+      html,
+      body {
+        width: 210mm;
+        background: #050308 !important;
+      }
+
+      body {
+        color: #ffffff !important;
+        font-family: "Poppins", Arial, sans-serif !important;
+        line-height: 1.22;
+      }
+
+      .site-shell {
+        width: 100% !important;
+        padding: 0 !important;
+      }
+
+      .resume {
+        min-height: 0;
+        border: 1px solid rgba(216, 180, 254, 0.45) !important;
+        border-radius: 0;
+        background: #09070f !important;
+        box-shadow: none !important;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.18fr 0.82fr;
+        gap: 8mm;
+        padding: 7mm 8mm 5mm !important;
+        background: linear-gradient(135deg, #07040c, #2d1143) !important;
+      }
+
+      .eyebrow {
+        margin-bottom: 3mm;
+        padding: 1.5mm 2.5mm;
+        font-size: 7.5pt;
+      }
+
+      h1 {
+        font-size: 29pt;
+        line-height: 0.96;
+      }
+
+      .role-line {
+        margin-top: 3mm;
+        font-size: 9.2pt;
+        line-height: 1.35;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2mm;
+        padding-top: 0;
+      }
+
+      .contact-item {
+        min-height: 0;
+        padding: 1.8mm 2.2mm;
+        font-size: 7.6pt;
+        line-height: 1.2;
+      }
+
+      .contact-item svg {
+        width: 10px;
+        height: 10px;
+      }
+
+      .highlights {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        background: #0d0917 !important;
+      }
+
+      .metric {
+        min-height: 0;
+        padding: 4mm 5mm;
+        background: #0d0917 !important;
+      }
+
+      .metric strong {
+        font-size: 15pt;
+      }
+
+      .metric span {
+        margin-top: 1.5mm;
+        font-size: 7pt;
+        line-height: 1.28;
+      }
+
+      .content {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) 62mm;
+        gap: 6mm;
+        padding: 5mm 8mm 6mm !important;
+      }
+
+      .section {
+        margin-bottom: 4mm;
+      }
+
+      .section-title,
+      .panel-title {
+        margin-bottom: 2mm;
+        font-size: 7.3pt;
+        letter-spacing: 0.06em;
+      }
+
+      .summary {
+        font-size: 7.8pt;
+        line-height: 1.35;
+      }
+
+      .summary + .summary {
+        margin-top: 2mm;
+      }
+
+      .role-tags,
+      .keyword-cloud {
+        gap: 1.2mm;
+      }
+
+      .tag {
+        padding: 1mm 1.8mm;
+        border-radius: 99px;
+        font-size: 6.3pt;
+        line-height: 1.18;
+      }
+
+      .keyword-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2mm;
+      }
+
+      .keyword-group {
+        padding: 2mm;
+      }
+
+      .keyword-group h3 {
+        margin-bottom: 1.2mm;
+        font-size: 6.6pt;
+      }
+
+      .timeline {
+        gap: 2.2mm;
+      }
+
+      .timeline::before {
+        display: none;
+      }
+
+      .job {
+        padding-left: 0;
+        break-inside: avoid;
+      }
+
+      .timeline .job:nth-child(2) {
+        break-before: page;
+        padding-top: 5mm;
+      }
+
+      .job::before {
+        display: none;
+      }
+
+      .job-head {
+        grid-template-columns: 1fr auto;
+        gap: 3mm;
+        margin-bottom: 1mm;
+      }
+
+      .job h3 {
+        font-size: 8.2pt;
+      }
+
+      .company {
+        font-size: 6.9pt;
+      }
+
+      .period {
+        min-width: 28mm;
+        font-size: 6.2pt;
+      }
+
+      .bullets {
+        gap: 0.8mm;
+      }
+
+      .bullet {
+        padding-left: 2.7mm;
+        font-size: 6.55pt;
+        line-height: 1.28;
+      }
+
+      .bullet::before {
+        top: 0.63em;
+        width: 3px;
+        height: 3px;
+      }
+
+      .career-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2mm;
+      }
+
+      .panel {
+        margin-bottom: 3mm;
+        padding: 2.6mm;
+        break-inside: avoid;
+      }
+
+      .skill-list,
+      .stack-list {
+        gap: 1.7mm;
+      }
+
+      .skill,
+      .stack-item,
+      .highlight-card {
+        padding: 2mm;
+        font-size: 6.55pt;
+        line-height: 1.25;
+        min-height: 0;
+      }
+
+      .stack-item {
+        grid-template-columns: 10px 1fr;
+        gap: 1.7mm;
+      }
+
+      .stack-item svg,
+      .panel-title svg {
+        width: 10px;
+        height: 10px;
+      }
+
+      .education {
+        gap: 2mm;
+      }
+
+      .edu-degree {
+        font-size: 6.9pt;
+      }
+
+      .edu-school,
+      .edu-note,
+      .language-list {
+        font-size: 6.4pt;
+        line-height: 1.25;
+      }
+
+      .footer {
+        padding: 2.5mm 8mm;
+        font-size: 6.2pt;
+        background: #0d0917 !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -786,9 +1181,9 @@
     <article class="resume">
       <header class="hero">
         <div>
-          <div class="eyebrow"><i data-lucide="sparkles"></i> Growth, Product & Business</div>
+          <div class="eyebrow"><i data-lucide="badge-check"></i> ✦ Growth, Product & Business</div>
           <h1>Vinit Kumar Singh</h1>
-          <p class="role-line">Chief Growth Officer · Chief Business Officer · VP Product · 0→1 Builder · Strategy & Growth Head</p>
+          <p class="role-line">Chief Growth Officer — Chief Business Officer — VP Product — 0→1 Builder — Strategy & Growth Head</p>
           <div class="action-row" aria-label="Resume actions">
             <button class="btn" type="button" onclick="window.print()"><i data-lucide="printer"></i> Print or Save PDF</button>
             <a class="btn secondary" href="https://www.linkedin.com/in/vinitksinghh-exspinny-zoomo-biglaundry-bigworth-qukr/" target="_blank" rel="noreferrer"><i data-lucide="linkedin"></i> LinkedIn</a>
@@ -814,8 +1209,8 @@
         <div class="main-col">
           <section class="section">
             <h2 class="section-title">Executive Summary</h2>
-            <p class="summary">I don't just build strategies; I build the thing, ship the thing, and grow the thing. <strong>12+ years of founding-team experience</strong> across Automobile, SaaS, EdTech, E-Commerce and Consumer Services. Scaled <strong>Troopod to $0.77M ARR in 1.3 years</strong> with 100+ paying D2C brands. Core team at <strong>Spinny (Seed → Series A → Unicorn)</strong>, CredR, BigLaundry and BigWorth.</p>
-            <p class="summary">In the age of AI, I went further: I <strong>replaced entire CRM stacks</strong>, built internal and external databases from scratch, and deployed full-stack tools using <strong>Supabase + Cloudflare + GitHub</strong> without a single developer. The intersection of GTM instinct and technical execution is my unfair advantage.</p>
+            <p class="summary">◆ I don't just build strategies — I build the thing, ship the thing, and grow the thing. <strong>12+ years of founding-team experience</strong> across Automobile, SaaS, EdTech, E-Commerce and Consumer Services. Scaled <strong>Troopod to $0.77M ARR in 1.3 years</strong> with 100+ paying D2C brands. Core team at <strong>Spinny (Seed → Series A → Unicorn)</strong>, CredR, BigLaundry and BigWorth.</p>
+            <p class="summary">★ In the age of AI, I went further — I <strong>replaced entire CRM stacks</strong>, built internal and external databases from scratch, and deployed full-stack tools using <strong>Supabase + Cloudflare + GitHub</strong> without a single developer. The intersection of GTM instinct and technical execution is my unfair advantage.</p>
           </section>
 
           <section class="section">
@@ -1029,13 +1424,13 @@
 
         <aside class="side-col">
           <section class="panel">
-            <h2 class="panel-title"><i data-lucide="cpu"></i> AI-Native Stack</h2>
+            <h2 class="panel-title"><i data-lucide="briefcase-business"></i> Execution Stack</h2>
             <div class="stack-list">
               <div class="stack-item"><i data-lucide="database"></i><span><strong>Database:</strong> Supabase schema design, RLS, API integrations and CRM replacement</span></div>
               <div class="stack-item"><i data-lucide="cloud"></i><span><strong>Deployment:</strong> Cloudflare Workers + Pages for serverless business tools</span></div>
               <div class="stack-item"><i data-lucide="git-branch"></i><span><strong>Version Control:</strong> GitHub workflows, CI/CD, webhooks and automated triggers</span></div>
               <div class="stack-item"><i data-lucide="shopping-bag"></i><span><strong>E-Commerce:</strong> 100+ Shopify store builds, themes, apps and performance optimization</span></div>
-              <div class="stack-item"><i data-lucide="bot"></i><span><strong>AI Workflows:</strong> Prompt engineering, LLM-powered tooling and automated reporting</span></div>
+              <div class="stack-item"><i data-lucide="workflow"></i><span><strong>AI Workflows:</strong> Prompt engineering, LLM-powered tooling and automated reporting</span></div>
               <div class="stack-item"><i data-lucide="bar-chart-3"></i><span><strong>Analytics:</strong> Google Data Studio and Tableau BI dashboards</span></div>
             </div>
           </section>
