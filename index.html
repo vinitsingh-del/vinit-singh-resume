@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Resume of Vinit Kumar Singh - growth, product, business, and 0 to 1 execution leader." />
+  <title>Vinit Kumar Singh | Growth, Product & Business Leader</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <style>
+    :root {
+      --ink: #17202a;
+      --muted: #607086;
+      --line: #d8e0ea;
+      --surface: #ffffff;
+      --soft: #f4f7fb;
+      --soft-2: #eef5f7;
+      --accent: #0f766e;
+      --accent-2: #b42318;
+      --accent-3: #b7791f;
+      --navy: #17324d;
+      --shadow: 0 20px 60px rgba(23, 32, 42, 0.10);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 12% 0%, rgba(15, 118, 110, 0.10), transparent 28rem),
+        linear-gradient(135deg, #f8fafc 0%, #eef4f8 48%, #f7f3ed 100%);
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .preloader {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: grid;
+      place-items: center;
+      background: #f8fafc;
+      transition: opacity 420ms ease, visibility 420ms ease;
+    }
+
+    .preloader.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .loader-card {
+      width: min(320px, calc(100vw - 48px));
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .loader-mark {
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 18px;
+      border-radius: 50%;
+      border: 4px solid #d9e7e5;
+      border-top-color: var(--accent);
+      animation: spin 900ms linear infinite;
+    }
+
+    .loader-name {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .loader-copy {
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .site-shell {
+      width: min(1180px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 32px 0 56px;
+    }
+
+    .resume {
+      overflow: hidden;
+      border: 1px solid rgba(216, 224, 234, 0.88);
+      border-radius: 8px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.35fr 0.85fr;
+      gap: 32px;
+      padding: 42px;
+      color: #fff;
+      background:
+        linear-gradient(135deg, rgba(23, 50, 77, 0.97), rgba(15, 118, 110, 0.92)),
+        url("https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1800&q=80") center/cover;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 7px 10px;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.10);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      max-width: 780px;
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 0.96;
+      font-weight: 800;
+      overflow-wrap: break-word;
+    }
+
+    .role-line {
+      margin-top: 18px;
+      max-width: 760px;
+      color: rgba(255, 255, 255, 0.84);
+      font-size: 17px;
+      font-weight: 500;
+      overflow-wrap: break-word;
+    }
+
+    .contact-grid {
+      display: grid;
+      gap: 10px;
+      align-content: start;
+      padding-top: 8px;
+    }
+
+    .contact-item {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 10px;
+      align-items: center;
+      min-width: 0;
+      min-height: 42px;
+      padding: 10px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.11);
+      color: rgba(255, 255, 255, 0.92);
+      font-size: 13px;
+      word-break: break-word;
+    }
+
+    .contact-item svg {
+      width: 18px;
+      height: 18px;
+      color: #b8ebe5;
+    }
+
+    .action-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 42px;
+      padding: 10px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      border-radius: 8px;
+      background: #fff;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: #fff;
+    }
+
+    .btn svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .highlights {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-bottom: 1px solid var(--line);
+      background: #fbfcfe;
+    }
+
+    .metric {
+      min-height: 132px;
+      padding: 22px;
+      border-right: 1px solid var(--line);
+    }
+
+    .metric:last-child {
+      border-right: 0;
+    }
+
+    .metric strong {
+      display: block;
+      color: var(--accent);
+      font-size: 26px;
+      line-height: 1;
+      font-weight: 800;
+    }
+
+    .metric span {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 600;
+      overflow-wrap: anywhere;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 34px;
+      padding: 36px 42px 42px;
+    }
+
+    .main-col,
+    .side-col {
+      min-width: 0;
+    }
+
+    .section {
+      margin-bottom: 34px;
+    }
+
+    .section:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+    }
+
+    .section-title::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: var(--line);
+    }
+
+    .summary {
+      color: #314154;
+      font-size: 15px;
+    }
+
+    .summary + .summary {
+      margin-top: 12px;
+    }
+
+    .summary strong,
+    .bullet strong,
+    .skill strong,
+    .highlight-card strong {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .role-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      padding: 7px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--soft);
+      color: #314154;
+      font-size: 12px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 20px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 8px;
+      bottom: 8px;
+      left: 7px;
+      width: 2px;
+      background: #dce7e8;
+    }
+
+    .job {
+      position: relative;
+      padding-left: 32px;
+    }
+
+    .job::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 0;
+      width: 16px;
+      height: 16px;
+      border: 4px solid #fff;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 1px #cfe0df;
+    }
+
+    .job-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 14px;
+      align-items: start;
+      margin-bottom: 8px;
+    }
+
+    .job h3 {
+      color: var(--ink);
+      font-size: 17px;
+      line-height: 1.25;
+    }
+
+    .company {
+      display: block;
+      margin-top: 2px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .period {
+      min-width: 150px;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 700;
+      text-align: right;
+    }
+
+    .bullets {
+      display: grid;
+      gap: 6px;
+    }
+
+    .bullet {
+      position: relative;
+      padding-left: 16px;
+      color: #405166;
+      font-size: 13px;
+    }
+
+    .bullet::before {
+      content: "";
+      position: absolute;
+      top: 0.72em;
+      left: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-3);
+      transform: translateY(-50%);
+    }
+
+    .panel {
+      margin-bottom: 24px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: linear-gradient(180deg, #ffffff, #f8fbfc);
+    }
+
+    .panel:last-child {
+      margin-bottom: 0;
+    }
+
+    .panel-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 12px;
+      color: var(--navy);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .panel-title svg {
+      width: 17px;
+      height: 17px;
+      color: var(--accent);
+    }
+
+    .skill-list,
+    .stack-list,
+    .language-list {
+      display: grid;
+      gap: 10px;
+    }
+
+    .skill,
+    .stack-item,
+    .highlight-card {
+      padding: 11px;
+      border: 1px solid #e2e9f0;
+      border-radius: 8px;
+      background: #fff;
+      color: #405166;
+      font-size: 12.5px;
+    }
+
+    .stack-item {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 9px;
+      align-items: start;
+    }
+
+    .stack-item svg {
+      width: 16px;
+      height: 16px;
+      margin-top: 2px;
+      color: var(--accent);
+    }
+
+    .career-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .highlight-card {
+      min-height: 94px;
+      border-left: 4px solid var(--accent);
+    }
+
+    .education {
+      display: grid;
+      gap: 12px;
+    }
+
+    .edu-degree {
+      color: var(--ink);
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    .edu-school,
+    .edu-note,
+    .language-list {
+      color: var(--muted);
+      font-size: 12.5px;
+    }
+
+    .footer {
+      padding: 20px 42px;
+      border-top: 1px solid var(--line);
+      background: var(--soft);
+      color: var(--muted);
+      font-size: 12px;
+      text-align: center;
+    }
+
+    .floating-print {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 50;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 54px;
+      height: 54px;
+      border: 0;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      box-shadow: 0 15px 35px rgba(15, 118, 110, 0.30);
+      cursor: pointer;
+    }
+
+    .floating-print svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .highlights {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .metric:nth-child(2) {
+        border-right: 0;
+      }
+
+      .metric:nth-child(-n + 2) {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .contact-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 680px) {
+      .site-shell {
+        width: min(100% - 20px, 1180px);
+        padding: 10px 0 34px;
+      }
+
+      .hero,
+      .content,
+      .footer {
+        padding: 24px 20px;
+      }
+
+      h1 {
+        font-size: 32px;
+        line-height: 1.05;
+      }
+
+      .role-line {
+        font-size: 16px;
+        overflow-wrap: anywhere;
+      }
+
+      .metric,
+      .panel,
+      .job,
+      .summary,
+      .bullet,
+      .skill,
+      .stack-item,
+      .highlight-card {
+        min-width: 0;
+      }
+
+      .summary,
+      .bullet,
+      .metric span,
+      .skill,
+      .stack-item,
+      .highlight-card {
+        overflow-wrap: anywhere;
+      }
+
+      .contact-grid,
+      .highlights,
+      .career-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .metric {
+        border-right: 0;
+        border-bottom: 1px solid var(--line);
+      }
+
+      .metric:last-child {
+        border-bottom: 0;
+      }
+
+      .job-head {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .period {
+        min-width: 0;
+        text-align: left;
+      }
+
+      .floating-print {
+        right: 14px;
+        bottom: 14px;
+      }
+    }
+
+    @media print {
+      body {
+        background: #fff !important;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .preloader,
+      .floating-print,
+      .action-row {
+        display: none !important;
+      }
+
+      .site-shell {
+        width: 100%;
+        padding: 0;
+      }
+
+      .resume {
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+      }
+
+      .hero {
+        padding: 28px 32px;
+      }
+
+      .content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 26px 32px;
+      }
+
+      .highlights {
+        break-inside: avoid;
+      }
+
+      .job,
+      .panel,
+      .highlight-card {
+        break-inside: avoid;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="preloader" id="preloader" aria-live="polite" aria-label="Loading resume">
+    <div class="loader-card">
+      <div class="loader-mark" aria-hidden="true"></div>
+      <div class="loader-name">Vinit Kumar Singh</div>
+      <div class="loader-copy">Preparing executive profile</div>
+    </div>
+  </div>
+
+  <main class="site-shell">
+    <article class="resume">
+      <header class="hero">
+        <div>
+          <div class="eyebrow"><i data-lucide="sparkles"></i> Growth, Product & Business</div>
+          <h1>Vinit Kumar Singh</h1>
+          <p class="role-line">Chief Growth Officer · Chief Business Officer · VP Product · 0→1 Builder · Strategy & Growth Head</p>
+          <div class="action-row" aria-label="Resume actions">
+            <button class="btn" type="button" onclick="window.print()"><i data-lucide="printer"></i> Print or Save PDF</button>
+            <a class="btn secondary" href="https://www.linkedin.com/in/vinitksinghh-exspinny-zoomo-biglaundry-bigworth-qukr/" target="_blank" rel="noreferrer"><i data-lucide="linkedin"></i> LinkedIn</a>
+          </div>
+        </div>
+
+        <address class="contact-grid">
+          <a class="contact-item" href="tel:+916360817581"><i data-lucide="phone"></i><span>+91-6360817581</span></a>
+          <a class="contact-item" href="mailto:vinit.singh360@gmail.com"><i data-lucide="mail"></i><span>vinit.singh360@gmail.com</span></a>
+          <div class="contact-item"><i data-lucide="map-pin"></i><span>Bangalore, India</span></div>
+          <a class="contact-item" href="https://www.linkedin.com/in/vinitksinghh-exspinny-zoomo-biglaundry-bigworth-qukr/" target="_blank" rel="noreferrer"><i data-lucide="external-link"></i><span>LinkedIn Profile</span></a>
+        </address>
+      </header>
+
+      <section class="highlights" aria-label="Career metrics">
+        <div class="metric"><strong>$0.77M</strong><span>ARR built at Troopod in 1.3 years from concept stage</span></div>
+        <div class="metric"><strong>100+</strong><span>D2C Shopify launches including Mia by Tanishq, Durex, VGR and BSC</span></div>
+        <div class="metric"><strong>74</strong><span>Showrooms managed at CredR with business intelligence built from zero</span></div>
+        <div class="metric"><strong>12+</strong><span>Years across automobile, SaaS, EdTech, e-commerce and consumer services</span></div>
+      </section>
+
+      <div class="content">
+        <div class="main-col">
+          <section class="section">
+            <h2 class="section-title">Executive Summary</h2>
+            <p class="summary">I don't just build strategies; I build the thing, ship the thing, and grow the thing. <strong>12+ years of founding-team experience</strong> across Automobile, SaaS, EdTech, E-Commerce and Consumer Services. Scaled <strong>Troopod to $0.77M ARR in 1.3 years</strong> with 100+ paying D2C brands. Core team at <strong>Spinny (Seed → Series A → Unicorn)</strong>, CredR, BigLaundry and BigWorth.</p>
+            <p class="summary">In the age of AI, I went further: I <strong>replaced entire CRM stacks</strong>, built internal and external databases from scratch, and deployed full-stack tools using <strong>Supabase + Cloudflare + GitHub</strong> without a single developer. The intersection of GTM instinct and technical execution is my unfair advantage.</p>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Target Roles</h2>
+            <div class="role-tags">
+              <span class="tag">Chief Growth Officer</span>
+              <span class="tag">Chief Business Officer</span>
+              <span class="tag">VP Product</span>
+              <span class="tag">Head of Strategy & Growth</span>
+              <span class="tag">0→1 Product Lead</span>
+              <span class="tag">Founding Member / EIR</span>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Professional Experience</h2>
+            <div class="timeline">
+              <section class="job">
+                <div class="job-head">
+                  <h3>Founding Member - Growth, Product & Business <span class="company">Troopod.io</span></h3>
+                  <div class="period">Jul 2023 - Present · India</div>
+                </div>
+                <div class="bullets">
+                  <p class="bullet">Took Troopod from a raw concept to <strong>$0.77M ARR in 1.3 years</strong> with <strong>100+ paying D2C brand clients</strong>.</p>
+                  <p class="bullet">Led full MVP development: market analysis, product architecture, pricing and GTM without external developers.</p>
+                  <p class="bullet"><strong>Replaced entire CRM/tooling stack</strong> using Supabase, Cloudflare Workers, GitHub repos, and AI-native workflows.</p>
+                  <p class="bullet">Directed <strong>100+ live Shopify store launches</strong>: Mia by Tanishq, Durex, VGR, BSC and many more.</p>
+                  <p class="bullet">Secured investor interest from <strong>Kunal Shah (CRED)</strong> and <strong>Ankit Nagori (Curefoods)</strong>.</p>
+                </div>
+              </section>
+
+              <section class="job">
+                <div class="job-head">
+                  <h3>Business Head - GTM & P&L <span class="company">BYJU'S Tuition Centre</span></h3>
+                  <div class="period">Mar 2022 - Jul 2023 · Bangalore, Hyderabad, Mysore</div>
+                </div>
+                <div class="bullets">
+                  <p class="bullet">Owned full P&L for <strong>15 centres across 3 cities</strong>.</p>
+                  <p class="bullet">Achieved <strong>₹1 Cr+ revenue in 11 months</strong>; drove <strong>23% renewal rate</strong> in Year 1.</p>
+                  <p class="bullet">Built Business Intelligence infrastructure from scratch with dashboards, funnel tracking and enrollment analytics.</p>
+                  <p class="bullet">Recognised as <strong>Top Contributor 2022-23 PAN India</strong> for revenue performance.</p>
+                </div>
+              </section>
+
+              <section class="job">
+                <div class="job-head">
+                  <h3>Business Head Consultant <span class="company">Big Laundry Services Pvt. Ltd</span></h3>
+                  <div class="period">Oct 2021 - Jan 2022 · Bangalore & Chennai</div>
+                </div>
+                <div class="bullets">
+                  <p class="bullet">Scaled monthly revenue from <strong>₹5L → ₹11L in 3 months</strong>, a 120% lift.</p>
+                  <p class="bullet">Reduced OPEX by <strong>13%</strong> and improved order efficiency by <strong>32%</strong> through process redesign.</p>
+                </div>
+              </section>
+
+              <section class="job">
+                <div class="job-head">
+                  <h3>CEO Office - Special Projects <span class="company">CredR</span></h3>
+                  <div class="period">Feb 2020 - Sep 2021 · PAN India</div>
+                </div>
+                <div class="bullets">
+                  <p class="bullet">Managed business operations across <strong>74 showrooms pan India</strong>: auditing, optimization and vertical alignment.</p>
+                  <p class="bullet">Built Business Intelligence vertical from scratch using <strong>Google Data Studio and Tableau</strong>.</p>
+                  <p class="bullet">Led FOCCO Model Creation and Hub-Spoke Retrofit Centres for used two-wheeler supply chain.</p>
+                </div>
+              </section>
+
+              <section class="job">
+                <div class="job-head">
+                  <h3>SVP - Founding Member <span class="company">BigWorth & Big Laundry (GCC/Bahrain)</span></h3>
+                  <div class="period">Jun 2018 - May 2019 · India & Bahrain</div>
+                </div>
+                <div class="bullets">
+                  <p class="bullet">Built hub-spoke retail model generating <strong>₹25 Cr/year (~$3M ARR)</strong> across India.</p>
+                  <p class="bullet">Launched <strong>3 stores in Bahrain</strong>, the group's first international expansion into GCC.</p>
+                  <p class="bullet">Remodeled business to subscription-based model; executed 7-city South India launch.</p>
+                </div>
+              </section>
+
+              <section class="job">
+                <div class="job-head">
+                  <h3>Planning, Strategy & Growth Head - Core Team <span class="company">Hamara Garage</span></h3>
+                  <div class="period">Sep 2017 - May 2018 · Bangalore & Pune</div>
+                </div>
+                <div class="bullets">
+                  <p class="bullet">Led product, growth and strategy for "Uber of Car Service" end to end.</p>
+                  <p class="bullet">Built app, website platform, UI/UX, DMS and analytics stack.</p>
+                  <p class="bullet">Model pivot contributor; company later <strong>acquired by GoMechanic</strong>.</p>
+                </div>
+              </section>
+
+              <section class="job">
+                <div class="job-head">
+                  <h3>Head of Strategy & Growth - Management Team <span class="company">Spinny</span></h3>
+                  <div class="period">Dec 2015 - Nov 2017 · Gurgaon, PAN India</div>
+                </div>
+                <div class="bullets">
+                  <p class="bullet">Core founding team member; joined at <strong>seed stage</strong> and scaled through <strong>Series A</strong>.</p>
+                  <p class="bullet">Led <strong>67+ member team</strong> across product development and growth strategy.</p>
+                  <p class="bullet">Contributed to Spinny's early growth playbook, now a <strong>unicorn ($1.8B valuation)</strong>.</p>
+                </div>
+              </section>
+
+              <section class="job">
+                <div class="job-head">
+                  <h3>Subject Matter Expert - Onsite <span class="company">TCS (GE Healthcare)</span></h3>
+                  <div class="period">Jun 2014 - Aug 2015 · Texas, USA & Bangalore</div>
+                </div>
+                <div class="bullets">
+                  <p class="bullet">Set up rolling forecast and fill rate processes; optimized distribution and logistics costs for GE Healthcare.</p>
+                </div>
+              </section>
+
+              <section class="job">
+                <div class="job-head">
+                  <h3>GET - Production Planning & Demand Management <span class="company">AkzoNobel</span></h3>
+                  <div class="period">Apr 2013 - Apr 2014 · Bangalore</div>
+                </div>
+                <div class="bullets">
+                  <p class="bullet">Handled production planning, capacity planning, inventory control and export component management.</p>
+                </div>
+              </section>
+            </div>
+          </section>
+
+          <section class="section">
+            <h2 class="section-title">Career Highlights</h2>
+            <div class="career-grid">
+              <div class="highlight-card"><strong>Spinny founding team:</strong> Seed → Series A → Unicorn ($1.8B)</div>
+              <div class="highlight-card"><strong>₹25 Cr/year retail model</strong> at BigWorth plus Bahrain GCC expansion</div>
+              <div class="highlight-card"><strong>BYJU'S Top Contributor 2022-23</strong> with ₹1 Cr+ revenue in 11 months</div>
+              <div class="highlight-card"><strong>₹5L → ₹11L/month in 3 months</strong> at Big Laundry with 13% OPEX cut</div>
+            </div>
+          </section>
+        </div>
+
+        <aside class="side-col">
+          <section class="panel">
+            <h2 class="panel-title"><i data-lucide="cpu"></i> AI-Native Stack</h2>
+            <div class="stack-list">
+              <div class="stack-item"><i data-lucide="database"></i><span><strong>Database:</strong> Supabase schema design, RLS, API integrations and CRM replacement</span></div>
+              <div class="stack-item"><i data-lucide="cloud"></i><span><strong>Deployment:</strong> Cloudflare Workers + Pages for serverless business tools</span></div>
+              <div class="stack-item"><i data-lucide="git-branch"></i><span><strong>Version Control:</strong> GitHub workflows, CI/CD, webhooks and automated triggers</span></div>
+              <div class="stack-item"><i data-lucide="shopping-bag"></i><span><strong>E-Commerce:</strong> 100+ Shopify store builds, themes, apps and performance optimization</span></div>
+              <div class="stack-item"><i data-lucide="bot"></i><span><strong>AI Workflows:</strong> Prompt engineering, LLM-powered tooling and automated reporting</span></div>
+              <div class="stack-item"><i data-lucide="bar-chart-3"></i><span><strong>Analytics:</strong> Google Data Studio and Tableau BI dashboards</span></div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <h2 class="panel-title"><i data-lucide="target"></i> Core Competencies</h2>
+            <div class="skill-list">
+              <div class="skill"><strong>Growth & GTM:</strong> 0→1 Product Launch · GTM Strategy · Revenue Scaling · D2C Enablement</div>
+              <div class="skill"><strong>Business Leadership:</strong> P&L Ownership · Multi-City Ops · Team Leadership (70+) · Investor Relations</div>
+              <div class="skill"><strong>Product:</strong> MVP Development · PMF · Pricing Strategy · SaaS Product Design · UI/UX Direction</div>
+              <div class="skill"><strong>Strategy:</strong> Business Modelling · Process Redesign · OPEX Optimization · Hub-Spoke Models</div>
+              <div class="skill"><strong>Sectors:</strong> Automobile · SaaS · E-Commerce · EdTech · Consumer Services · HealthTech</div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <h2 class="panel-title"><i data-lucide="graduation-cap"></i> Education</h2>
+            <div class="education">
+              <div>
+                <div class="edu-degree">PGDM - Marketing & Finance</div>
+                <div class="edu-school">Indian Institute of Management, Kozhikode (IIM-K)</div>
+                <div class="edu-note">2014-2016 · Dropped post-field traction; chose execution over classroom</div>
+              </div>
+              <div>
+                <div class="edu-degree">B.Tech - Chemical Engineering · CGPA 8.9/10</div>
+                <div class="edu-school">Class of 2012</div>
+                <div class="edu-note">Systems thinking, process optimization, analytical problem solving</div>
+              </div>
+            </div>
+          </section>
+
+          <section class="panel">
+            <h2 class="panel-title"><i data-lucide="languages"></i> Languages</h2>
+            <div class="language-list">English · Hindi · Punjabi · Bengali · Maithali · Kannada</div>
+          </section>
+        </aside>
+      </div>
+
+      <footer class="footer">
+        Troopod Founding Member · Spinny Core Team · CredR CEO Office · GoMechanic Ecosystem · IIM-K · TCS / GE Healthcare · AkzoNobel
+      </footer>
+    </article>
+  </main>
+
+  <button class="floating-print" type="button" onclick="window.print()" aria-label="Print or save resume as PDF">
+    <i data-lucide="printer"></i>
+  </button>
+
+  <script>
+    function hidePreloader() {
+      document.getElementById("preloader").classList.add("is-hidden");
+    }
+
+    window.addEventListener("load", function () {
+      window.setTimeout(hidePreloader, 650);
+    });
+
+    window.setTimeout(hidePreloader, 1800);
+
+    window.addEventListener("DOMContentLoaded", function () {
+      if (window.lucide) {
+        window.lucide.createIcons();
+      }
+    });
+  </script>
+</body>
+</html>
